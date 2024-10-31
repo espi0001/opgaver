@@ -1,9 +1,13 @@
-import CookieConsentPopup from "@/templates/CookieConsentPopup";
+import CookieConsentPopup from "@/components/CookieConsentPopup";
+import If from "../components/If.jsx";
 
 export default function Home() {
+  const cookieIsAccepted = true;
   return (
     <div>
-      <CookieConsentPopup />
+      <If condition={cookieIsAccepted}>
+        <CookieConsentPopup />
+      </If>
     </div>
   );
 }
