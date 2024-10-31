@@ -10,7 +10,9 @@ const CookieConsentPopup = () => {
         <IoIosClose className="cursor-pointer text-white" size={25} />
       </header>
       <footer className="flex flex-col">
-        <p className="text-white leading-8 text-[25px] mb-4">We use cookies to improve your user expirence.</p>
+        <p className="text-white leading-8 text-[25px] mb-4">
+          We use cookies to improve your user expirence.
+        </p>
         <button className={`p-3 text-lg rounded-lg h-15 bg-slate-50`}>
           <span className="text-black">I like Cookies</span>
         </button>

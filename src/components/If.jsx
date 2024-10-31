@@ -1,5 +1,5 @@
 const If = ({ children, condition }) => {
-  return <>{condition && children }</>;
+  return <>{condition && children}</>;
 };
 
 export default If;
