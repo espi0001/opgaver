@@ -1,4 +1,4 @@
-import Avatar from "./Avatar";
+// import Avatar from "./Avatar";
 import Button from "./Button";
 
 const MemberCard = ({ member }) => {
@@ -6,7 +6,7 @@ const MemberCard = ({ member }) => {
   return (
     <li className="flex items-center justify-between py-4">
       <div className="flex items-center gap-4">
-        <Avatar imgUrl={imgUrl} name={name} />
+        {/* <Avatar imgUrl={imgUrl} name={name} /> */}
         <div>
           <p className="text-sm font-medium text-gray-800">{name}</p>
           <p className="text-sm text-gray-500">{role}</p>

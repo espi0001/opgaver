@@ -8,7 +8,7 @@ const Button = ({ variant = "primary", text, icon = null }) => {
 
   return (
     <button className={classes}>
-      {icon && <span className="icon">{icon}</span>}
+      {/* {icon && <span className="icon">{icon}</span>} */}
       {text}
     </button>
   );
