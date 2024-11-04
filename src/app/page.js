@@ -1,16 +1,15 @@
-import CookieConsentPopup from "@/components/CookieConsentPopup";
-import If from "../components/If.jsx";
+import Header from "@/components/Header";
+import SignupForm from "@/components/SignupForm";
+import MemberList from "@/components/MemberList";
 
 export default function Home() {
-  const cookieIsAccepted = true;
-  // Opretter en variabel 'cookieIsAccepted' og sætter den til 'true'.
-
   return (
-    <div>
-      <If condition={cookieIsAccepted}>
-        <CookieConsentPopup />
-      </If>
-      {/* Renderer CookieConsentPopup-komponenten kun, hvis 'cookieIsAccepted' er sand */}
+    <div className="min-h-screen">
+      <div className="mx-auto max-w-lg px-4 py-6">
+        <Header />
+        <SignupForm />
+        <MemberList />
+      </div>
     </div>
   );
 }
