@@ -5,8 +5,8 @@ import { LiaCookieBiteSolid } from "react-icons/lia";
 import { IoIosClose } from "react-icons/io";
 
 import { useState } from "react";
+import AcceptButton from "./AcceptButton";
 
-// Definerer CookieConsentPopup-komponenten.
 const CookieConsentPopup = () => {
   // cookies er ikke accepteret som default, men føst når brugeren accepterer dem
   // Hvis vi ikke er nødt til at opdatere hele siden, så er det bedst at bruge state variabler
@@ -23,20 +23,15 @@ const CookieConsentPopup = () => {
         <header className="flex justify-between">
           {/* ændrer LiaCookieBiteSolid ikonets farve afhængig af temaet (mørk/lys) */}
           <LiaCookieBiteSolid className="dark:text-black text-white" size={50} />
-          {/* Luk-ikon, ændrer farve baseret på temaet */}
-          <IoIosClose onClick={() => setisCookieAcceptedClosed(!isCookieAcceptedClosed)} className="cursor-pointer dark:text-black text-white" size={25} />
+          <button className="flex" onClick={() => setisCookieAcceptedClosed(!isCookieAcceptedClosed)}>
+            <IoIosClose className="cursor-pointer dark:text-black text-white" size={25} />
+          </button>
         </header>
         <footer className="flex flex-col">
           {/* Ændrer farve baseret på temaet */}
           <p className="text-white dark:text-black leading-8 text-[25px] mb-4">We use cookies to improve your user expirence.</p>
-          {/* Knap farver baseret af temaet */}
-          <button
-            // Hvis knappen trykkes, så sættes isCookieAccepted til false */}
-            onClick={() => setIsCookieAccepted(!isCookieAccepted)}
-            className={`bg-white dark:bg-black p-3 text-lg rounded-lg h-15`}
-          >
-            <span className="text-black dark:text-white">I like Cookies</span>
-          </button>
+
+          <AcceptButton isCookieAccepted={isCookieAccepted} setIsCookieAccepted={setIsCookieAccepted} />
         </footer>
       </section>
     )
