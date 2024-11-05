@@ -1,30 +1,25 @@
-"use client";
-import { useState } from "react";
-
-import { IoCloseOutline } from "react-icons/io5";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-const Item = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Item = ({ isOpen, setIsOpen, item }) => {
   return (
     <div className="border-b border-slate-200 py-4">
       <header>
         <button
           onClick={() => {
-            // Det er logical &&
-            setIsOpen(!isOpen);
+            // hvis isOpen er lig med item, så skal vi sætte isOpen til 0, ellers skal vi sætte isOpen til item
+            isOpen === item ? setIsOpen(0) : setIsOpen(item);
           }}
           className="flex items-center justify-between text-black w-full py-2 font-semibold"
         >
           <span className="">Is it sunny in DK?</span>
 
-          {/* Der er en ternary operator, som tjekker om isOpen er true eller false, og så viser den enten en plus eller minus ikon */}
-          <span>{isOpen ? <FaMinus className="text-blue-900 ml-8 self-start" /> : <FaPlus className="text-black ml-8 self-start" />}</span>
+          {/* hvis isOpen er lig med item, så skal vi vise FaMinus, ellers skal vi vise FaPlus */}
+          <span>{isOpen === item ? <FaMinus className="text-blue-900 ml-8 self-start" /> : <FaPlus className="text-black ml-8 self-start" />}</span>
         </button>
       </header>
 
       {/* Her er der en if statement, som kun viser det indhold, som er i denne if statement, hvis isOpen er true */}
-      {isOpen && (
+      {isOpen === item && (
         <section className="text-sm text-slate-600 bg-slate-100 p-4">
           <p className="text-black">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam saepe expedita tempore dicta aspernatur culpa eveniet animi cumque labore impedit aperiam, iusto consectetur voluptatibus odio quam? Mollitia veritatis ut deleniti.</p>
         </section>
