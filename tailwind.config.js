@@ -7,7 +7,7 @@ module.exports = {
         "gradient-custom": "linear-gradient(294deg, #C8DCE5 0%, #B6CCDA 100%)",
       },
       lineHeight: {
-        custom: "4rem",
+        custom: "6rem",
       },
       colors: {
         background: "var(--background)",
@@ -15,6 +15,9 @@ module.exports = {
         darkGray60: "rgba(67, 69, 88, 0.6)",
         lightTeal: "rgba(106, 221, 204, 0.6)",
         peach: "rgba(249, 205, 196, 0.6)",
+      },
+      fontFamily: {
+        body: ["Poppins", "sans-serif"],
       },
     },
   },

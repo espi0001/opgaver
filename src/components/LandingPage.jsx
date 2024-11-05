@@ -12,8 +12,16 @@ import Navigation from "@/components/Navigation";
 import ColorIndicator from "@/components/ColorIndicator";
 import SelectWatch from "@/components/SelectWatch";
 
-import Next from "@/components/Next";
-import { FaArrowLeftLong, FaArrowRight } from "react-icons/fa6";
+// import Next from "@/components/Next";
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
+
+import { Poppins } from "@next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
 
 const LandingPage = () => {
   const [imgSrc, setImgSrc] = useState(navy);
@@ -23,18 +31,18 @@ const LandingPage = () => {
   };
 
   return (
-    <section className="bg-gradient-custom p-[70px]">
+    <section className="bg-gradient-custom py-[53px] px-[70px]">
       <Navigation />
 
       <div className="grid grid-cols-[auto_auto_auto] w-full mx-auto text-white">
-        <div className="my-12 leading-custom">
-          <h1 className="text-white text-[64px] font-normal content-center">
+        <div className="leading-custom content-center">
+          <h1 className="text-white text-[64px] font-normal content-center" style={poppins.style}>
             <span className="font-bold">The Perfect Moment</span> <br /> Between Past And <br />
             Future.
           </h1>
         </div>
 
-        <div className="grid itemms-center justify-center">
+        <div className="grid items-center justify-center mt-[19px]">
           <Image src={imgSrc} alt="Apple Watch" className="" width={486} height={486} />
         </div>
 
@@ -52,9 +60,9 @@ const LandingPage = () => {
 
         <div className="col-start-1 col-span-1 row-span-3 content-end mb-[25px]">
           <div className="flex gap-4 items-center">
-            <FaArrowLeftLong />
+            <HiArrowLongLeft />
             <p>1</p>
-            <FaArrowRight />
+            <HiArrowLongRight />
           </div>
         </div>
 

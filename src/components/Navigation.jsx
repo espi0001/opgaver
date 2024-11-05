@@ -5,7 +5,7 @@ import NavButton from "./NavButton";
 
 const Navigation = () => {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-between items-center pb-[53px]">
       <a className="cursor-pointer" href="#">
         <FaApple size={50} color="white" />
       </a>
