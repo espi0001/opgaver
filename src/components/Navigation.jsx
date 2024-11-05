@@ -1,3 +1,5 @@
+"use client";
+
 import { FaApple } from "react-icons/fa";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
 

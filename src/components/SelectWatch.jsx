@@ -1,8 +1,6 @@
 "use client";
+
 import Image from "next/image";
-import navy from "../images/navy.png";
-import mint from "../images/mint.png";
-import ocean from "../images/ocean.png";
 
 const SelectWatch = ({ onClick, bgColor, imageSkift }) => {
   return (

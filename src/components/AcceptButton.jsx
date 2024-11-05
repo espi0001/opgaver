@@ -1,3 +1,5 @@
+"use client";
+
 const AcceptButton = ({ ...props }) => {
   return (
     <button
