@@ -4,7 +4,6 @@ import { useState } from "react";
 import Item from "./Item";
 
 const Accordion = () => {
-  const [activeItem, setActiveItem] = useState(0);
   return (
     <div className="relative font-inter antialiased">
       <main className="relative min-h-screen bg-slate-50 overflow-hidden">
@@ -13,9 +12,6 @@ const Accordion = () => {
           <Item />
           <Item />
           <Item />
-          {/* <Item item={1} activeItem={activeItem} setActiveItem={setActiveItem} />
-          <Item item={2} activeItem={activeItem} setActiveItem={setActiveItem} />
-          <Item item={3} activeItem={activeItem} setActiveItem={setActiveItem} /> */}
         </section>
       </main>
 
