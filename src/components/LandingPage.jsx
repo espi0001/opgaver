@@ -6,6 +6,8 @@ import mint from "../images/mint.png";
 import navy from "../images/navy.png";
 import ocean from "../images/ocean.png";
 
+import { HiDotsVertical } from "react-icons/hi";
+
 import Navigation from "@/components/Navigation";
 // import ProductText from "@/components/ProductText";
 // import BuyButton from "@/components/BuyButton";
@@ -48,7 +50,9 @@ const LandingPage = () => {
 
         <div className="flex flex-col items-center mt-auto mb-auto">
           <ColorIndicator bgColor="bg-darkGray60" imageSkift={navy} onClick={() => handleImageChange(navy)} />
+          <HiDotsVertical />
           <ColorIndicator bgColor="bg-lightTeal" imageSkift={mint} onClick={() => handleImageChange(mint)} />
+          <HiDotsVertical />
           <ColorIndicator bgColor="bg-peach" imageSkift={ocean} onClick={() => handleImageChange(ocean)} />
         </div>
 
