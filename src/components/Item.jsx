@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import { IoCloseOutline } from "react-icons/io5";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 const Item = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +17,9 @@ const Item = () => {
           className="flex items-center justify-between text-black w-full py-2 font-semibold"
         >
           <span className="">Is it sunny in DK?</span>
-          <span>
-            <IoCloseOutline className="text-black ml-8 self-start" />
-          </span>
+
+          {/* Der er en ternary operator, som tjekker om isOpen er true eller false, og så viser den enten en plus eller minus ikon */}
+          <span>{isOpen ? <FaMinus className="text-blue-900 ml-8 self-start" /> : <FaPlus className="text-black ml-8 self-start" />}</span>
         </button>
       </header>
 
