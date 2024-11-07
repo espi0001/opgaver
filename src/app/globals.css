@@ -25,3 +25,9 @@ body {
     text-wrap: balance;
   }
 }
+
+button {
+  background: grey;
+  border-radius: 50px;
+  padding: 0.5rem;
+}

@@ -1,9 +1,8 @@
-import Accordion from "@/components/Accordion";
-import Item from "@/components/Item";
+import ToDoApp from "@/components/ToDoApp";
 export default function Home() {
   return (
     <div>
-      <Accordion />
+      <ToDoApp />
     </div>
   );
 }
