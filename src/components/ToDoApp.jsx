@@ -78,11 +78,12 @@ function List({ tasks, deleteTask }) {
     </div>
   );
 }
+
 function ListItem({ task }) {
   const { id, taskText, completed } = task;
   return (
     <li>
-      <span className="">{taskText}</span>
+      <span className={completed ? "line-through" : ""}>{taskText}</span>
       <button onClick={() => deleteTask(id)}>Delete</button>
       <button onClick={() => toggleTask(id)}>Complete</button>
     </li>
