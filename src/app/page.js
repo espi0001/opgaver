@@ -1,5 +1,5 @@
 // import ToDoApp from "@/components/ToDoApp";
 
 export default function Home() {
-  return <div></div>;
+  return <div>HOME</div>;
 }
