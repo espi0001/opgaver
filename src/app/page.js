@@ -1,9 +1,5 @@
-import ToDoApp from "@/components/ToDoApp";
+// import ToDoApp from "@/components/ToDoApp";
 
 export default function Home() {
-  return (
-    <div>
-      <ToDoApp />
-    </div>
-  );
+  return <div></div>;
 }
