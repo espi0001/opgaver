@@ -9,12 +9,8 @@ export default function Page() {
   if (error) return "Failed to load";
   if (!data) return "Loading...";
 
-  //   return <ul>{data.title
-
-  //   }</ul>;
   return (
     <ul>
-      {/* det dataset vi får tilbage sætter vi ind i en variabel son hedder products */}
       {data.products.map((product) => {
         return <li key={product.id}>{product.category}</li>;
       })}
