@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { IoLogoNpm } from "react-icons/io5";
+import { FiShoppingCart } from "react-icons/fi";
 
 const Navigation = () => {
   return (
@@ -16,6 +17,11 @@ const Navigation = () => {
           </li>
           <li>
             <Link href="/produkter">Produkter</Link>
+          </li>
+          <li>
+            <Link href="/produkter">
+              <FiShoppingCart />
+            </Link>
           </li>
         </ul>
       </nav>
